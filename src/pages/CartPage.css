@@ -1,0 +1,115 @@
+/* CartPage.css */
+
+/* Container for all cart items */
+.cart-items-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;  /* Center the container */
+}
+
+/* Each individual cart item */
+.cart-item {
+    display: flex;
+    gap: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Subtle shadow effect */
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for cart item */
+.cart-item:hover {
+    transform: scale(1.02);  /* Slightly enlarge the item on hover */
+}
+
+/* Cart item image styling */
+.cart-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* Cart item details text */
+.cart-item div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+/* Increase, Decrease, and Delete button styling */
+.cart-item .action-button {
+    padding: 5px 10px;  /* Smaller size for the action buttons */
+    background-color: #ccc;  /* Grey background color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;  /* Smaller font size */
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.cart-item .action-button:hover {
+    background-color: #bbb;  /* Darker grey when hovered */
+}
+
+/* Cart total section */
+.cart-total {
+    padding: 10px 0;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 20px;
+    border-top: 2px solid #ddd;
+    padding-top: 15px;
+}
+
+/* Navigation buttons section */
+.navigation-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;  /* Center the buttons */
+}
+
+/* Navigation button styling */
+.navigation-buttons button {
+    padding: 10px 20px;
+    background-color: #4caf50; /* Green background for navigation buttons */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Navigation button hover effect */
+.navigation-buttons button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 768px) {
+    .cart-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cart-item div {
+        align-items: center;
+        text-align: center;
+    }
+
+    .cart-total {
+        font-size: 18px; /* Adjust total font size for small screens */
+        text-align: left;
+    }
+}
